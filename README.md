@@ -2,7 +2,7 @@
 
 Pipeline de dados para integrar contratos, empenhos e ordens bancárias do Ceará em uma base analítica consultável. A solução ingere dados de uma API pública e de PostgreSQL, preserva o histórico bruto, aplica deduplicação incremental, constrói um modelo dimensional e disponibiliza análises financeiras, detecção de anomalias e previsão de pagamentos.
 
-![CI](https://github.com/jaimejrs/data-engineering-lab-PY03/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/jaimejrs/lakehouse-transparencia-ceara/actions/workflows/ci.yml/badge.svg)
 
 ![Arquitetura do lakehouse](imgs/arquitetura-diagrama.svg)
 
@@ -38,8 +38,8 @@ A junção direta entre contratos da API e empenhos do PostgreSQL **não é gara
 **Pré-requisitos:** Docker Compose, acesso ao PostgreSQL de origem e credenciais adequadas para a fonte. A API de contratos é pública. O relatório narrativo requer `OPENAI_API_KEY`; as outras etapas devem ser configuradas conforme o ambiente. O stack completo usa vários serviços e exige recursos de máquina compatíveis.
 
 ```bash
-git clone https://github.com/jaimejrs/data-engineering-lab-PY03.git
-cd data-engineering-lab-PY03
+git clone https://github.com/jaimejrs/lakehouse-transparencia-ceara.git
+cd lakehouse-transparencia-ceara
 cp .env.example .env
 # Configure SOURCE_POSTGRES_URL, caminhos de armazenamento e demais valores em .env
 docker compose up -d --build
